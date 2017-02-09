@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      My Contacts
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-list>
+      <button ion-item *ngFor="let contact of contacts">
+        <ion-icon name="football" item-left></ion-icon>
+        {{contact.name}}
+        <div class="" item-right>
+          {{contact.email}}
+        </div>
+      </button>
+    </ion-list>
 </ion-content>
