@@ -7,13 +7,18 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-      <button ion-item *ngFor="let contact of contacts">
-        <ion-icon name="football" item-left></ion-icon>
-        {{contact.name}}
-        <div class="" item-right>
-          {{contact.email}}
-        </div>
-      </button>
-    </ion-list>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-icon name="person" item-left></ion-icon>
+      {{contact.name}}
+      <div class="" item-right>
+        {{contact.email}}
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab center bottom>
+      <button ion-fab><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
 </ion-content>
