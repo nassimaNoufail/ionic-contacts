@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add a new contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="addForm" (ngSubmit)="buttonClicked()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" value="" placeholder="Name" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" value="" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button type="submit">Create</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
