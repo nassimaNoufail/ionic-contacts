@@ -11,14 +11,19 @@
     <ion-item *ngFor="let contact of contacts">
       <ion-icon name="person" item-left></ion-icon>
       {{contact.name}}
-      <div class="" item-right>
+      <div class="" item-center>
         {{contact.email}}
+      </div>
+      <div item-right>
+        <button ion-button icon-only clear color="dark" (click)="deleteButtonClicked(contact.id)">
+            <ion-icon name="close"></ion-icon>
+        </button>
       </div>
     </ion-item>
   </ion-list>
 
   <ion-fab center bottom>
-      <button ion-fab (click)="addButtonClicked()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab (click)="addButtonClicked()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>
