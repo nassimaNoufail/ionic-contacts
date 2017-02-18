@@ -3,12 +3,14 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddPage } from '../pages/add/add';
+import { ChooseIconPage } from '../pages/chooseIcon/chooseIcon';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AddPage
+    AddPage,
+    ChooseIconPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,7 +19,8 @@ import { AddPage } from '../pages/add/add';
   entryComponents: [
     MyApp,
     HomePage,
-    AddPage
+    AddPage,
+    ChooseIconPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

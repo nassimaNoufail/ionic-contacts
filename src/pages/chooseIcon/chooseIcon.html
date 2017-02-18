@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Choose an icon for {{ contact.name }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row *ngFor="let iconRow of allIcons">
+            <ion-col *ngFor="let icon of iconRow" width-20>
+                <button ion-button icon-only clear color="dark" (click)="iconClicked(icon)">
+                    <ion-icon name="{{icon}}"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

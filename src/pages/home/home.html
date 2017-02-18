@@ -9,8 +9,10 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let contact of contacts">
-      <ion-icon name="person" item-left></ion-icon>
-      {{contact.name}}
+      <button item-left ion-button icon-only clear color="dark" (click)="iconClicked(contact.id)">
+         <ion-icon name="{{ contact.icon }}"></ion-icon>
+      </button>
+     {{contact.name}}
       <div class="" item-center>
         {{contact.email}}
       </div>
